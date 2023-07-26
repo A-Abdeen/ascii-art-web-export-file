@@ -1,14 +1,11 @@
 #build stage
-FROM golang:alpine AS builder
+FROM golang:1.20
 RUN mkdir /build
 WORKDIR /build
-RUN go get -d -v ./...
-RUN cd /build && git clone 
-
-#final stage
-FROM alpine:latest
-RUN apk --no-cache add ca-certificates
-COPY --from=builder /go/bin/app /app
-ENTRYPOINT /app
+COPY go.mod ./
+RUN go mod download
+COPY *.go ./ 
+RUN CGO_ENABLED=0 GOOS=linux go build -o /asciiartcontainer
 LABEL Name=asciiartwebdockerize Version=0.0.1
 EXPOSE 8080
+CMD [sudo "/asciiartcontainer"]
