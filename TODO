@@ -1,0 +1,40 @@
+
+Each of the main below need to be done in seperate branches from the develop branch, then tested and merged back.
+
+IN PROGRESS
+    [ ] Separate page elements // ABDEEN
+        Create header and footer template files and inject them into template and error pages
+            [ ] Create header link
+                Make the header clickable and direct it to the main page
+            [ ] Handle all errors using templates
+                Create single HTML file and unify error handling code
+        [ ] Responsive design // ALALI
+            Test the design on different screen sizes and adjust accordingly
+            [ ] Button component
+                Adjust design and size 
+            [ ] Change buttons behavior
+                The buttons will execute the program and remain active on click
+PENDING
+    [ ] Test and refactor
+COMPLETED
+    [x] Change banner chooser // ABDEEN
+        Change from radio to button
+    [x] Implement banner sample // ALALI
+        Export sample of each banner type and inject it as button value
+    [x] Create merge branch // ABDEEN
+        Experimental merging to bring all changes together and test them before merging to master
+    [x] Use one template // ALALI
+        The handlers will parse and execute single HTML file to load both the main page and the results page
+    [x] Add output box // ALALI
+        Create css layout for output
+            [x] Add text color picker
+                Output color is frontend display function
+            [x] Add background color picker
+                Output background color to be changed on frontend only
+        BUG
+        HACK
+        FIXME
+        TODO
+        XXX
+        [ ]
+        [x]
