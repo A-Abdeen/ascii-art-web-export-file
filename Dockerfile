@@ -1,9 +1,8 @@
-#build stage
-FROM golang:1.20
-WORKDIR /app
-COPY go.mod ./
-RUN go mod download
-COPY *.go ./
-RUN CGO_ENABLED=0 GOOS=linux go build -o /asciiartcontainer
+FROM golang:1.19
+LABEL authors="ahmed, ahmed"
+LABEL version="0.1"
+COPY . /ascii-art-web-dockerize
+WORKDIR /ascii-art-web-dockerize/webprogram
+RUN go build -v main.go
+CMD ./main
 EXPOSE 8080
-CMD ["./main"]
