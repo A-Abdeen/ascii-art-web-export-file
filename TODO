@@ -1,0 +1,39 @@
+# NOTE
+Make branch per grouped tasks, then create pull request to merge into develop
+
+# IN PROGRESS
+## ABDN
+        HACK <branch-name> // ABDN
+            [ ] <task>
+            <short-description>
+
+## AALI
+        HACK <branch-name> // AALI
+            [ ] <task>
+            <short-description>
+
+## ADNN
+        HACK <branch-name> // ADNN
+            [ ] <task>
+            <short-description>
+
+# PENDING
+
+## FIXME <task>
+            <short-description>
+
+# ICEBOX
+
+        XXX <task>
+            <short-description>
+
+# COMPLETED
+
+# 
+/BUG
+/HACK
+/FIXME
+/TODO
+/XXX
+/[ ]
+/[x]
