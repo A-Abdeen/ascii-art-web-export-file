@@ -65,5 +65,19 @@ To run the test file:
 
     The test file will send a few HTTP requests to the server and verify the responses.
 
+## Docker image
+
+To create a docker image for this project, download and install the latest version of docker.
+
+To build and run the image for the first time (using bash terminal):
+```bash
+bash dockerize.sh
+```
+
+To stop running:
+```go
+docker stop dx
+```
+
 ### License
 This project is licensed under the 01 Schools License - see the LICENSE file for details.
