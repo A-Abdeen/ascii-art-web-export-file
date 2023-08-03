@@ -75,9 +75,23 @@ bash dockerize.sh
 ```
 
 To stop running:
-```go
+```docker
 docker stop dx
 ```
 
+To remove existing image:
+```docker
+docker rmi ascii-art-web-dockerize
+```
+
+To remove existing image:
+```docker
+docker rm dx
+```
+
+if you're lazy:
+```bash
+bash stop-docker.sh
+```
 ### License
 This project is licensed under the 01 Schools License - see the LICENSE file for details.
