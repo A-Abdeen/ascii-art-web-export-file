@@ -1,7 +1,9 @@
 {{ define "outputbox" }}
 <link rel="stylesheet" type="text/css" href="/css/output.css">
 <pre class="outputbox" style="background: {{ .BackColor }};color: {{ .Color }};">{{ .Output }}</pre>
-   <form>
+        <div>  
+       <form>       
     <input type="hidden" id="download" name="download" value="{{.Output}}">
-   <button type="submit" formaction="/download">Download!</button></form>
-{{ end }}
+   <input type="submit" formmethod="POST" formaction="/download">Download!</form></div>
+
+   {{ end }}
