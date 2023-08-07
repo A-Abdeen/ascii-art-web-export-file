@@ -2,6 +2,7 @@ package asciiart
 
 func RowPrinter(splitInput []string, sourceFile []byte, f func([]byte, int) []byte) string {
 	fullRowData := ""
+
 	var OutputWeb string
 	for _, singleLine := range splitInput { // to print one line at a time
 		if singleLine != "" {

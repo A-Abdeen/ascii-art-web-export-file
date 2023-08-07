@@ -6,8 +6,8 @@ import (
 	"html/template"
 	"log"
 	"net/http"
-	"strings"
 	"os"
+	"strings"
 )
 
 func ArtHandler(w http.ResponseWriter, r *http.Request) {
@@ -38,9 +38,9 @@ func ArtHandler(w http.ResponseWriter, r *http.Request) {
 			banner := r.FormValue("banner")
 			color := r.FormValue("color")
 			backColor := r.FormValue("backColor")
-			standardbanner,_ := os.ReadFile("standardbanner")
-			shadowbanner,_ := os.ReadFile("shadowbanner")
-			thinkertoybanner,_ := os.ReadFile("thinkertoybanner")
+			standardbanner, _ := os.ReadFile("standardbanner")
+			shadowbanner, _ := os.ReadFile("shadowbanner")
+			thinkertoybanner, _ := os.ReadFile("thinkertoybanner")
 			output := mod.Art{
 				Output:     mod.AsciiArt(inputString, banner),
 				Standard:   string(standardbanner),
@@ -63,6 +63,7 @@ func ArtHandler(w http.ResponseWriter, r *http.Request) {
 			if err != nil {
 				log.Fatal(err)
 			}
+
 			t.ExecuteTemplate(w, "base.html", output)
 		} else {
 			ErrorHandler(w, r, http.StatusTeapot)
