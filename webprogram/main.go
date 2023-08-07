@@ -11,11 +11,10 @@ func main() {
 	styles := http.FileServer(http.Dir("./templates/css"))
 	http.Handle("/css/", http.StripPrefix("/css/", styles))
 	http.HandleFunc("/", handler.BaseHandler)
-	http.HandleFunc("/download", handler.ExportHandler)
 	http.HandleFunc("/asciiart", handler.ArtHandler)
-	
+	http.HandleFunc("/download", handler.ExportHandler)
 	fmt.Printf("starting server at port 8080\n")
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	if err := http.ListenAndServe(":8089", nil); err != nil {
 		log.Fatal(err)
 	}
 }

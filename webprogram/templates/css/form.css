@@ -55,3 +55,33 @@ button:focus{
     background-color: purple(175, 36, 255);
     color: forestgreen;
 }
+.downl-btn {
+    background-color: rgb(255, 235, 224);
+    color: rgb(3, 0, 3);
+    border: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    font-family: 'Lilita One';
+    height: 80px;
+    width: 160px;
+    font-size: 1.7rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s;
+}
+    .downl-btn:hover{
+    background-color: rgb(114, 0, 0);
+    color: rgb(0, 0, 0);
+    border: purple;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 1px 1px 3px black;
+    font-weight: 900;
+    cursor: pointer;
+}
+.downl-btn:focus{
+    opacity: 0.4;
+    background-color: purple(175, 36, 255);
+    color: forestgreen;
+}

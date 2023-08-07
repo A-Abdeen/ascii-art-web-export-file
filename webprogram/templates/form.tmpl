@@ -22,6 +22,10 @@
                 <button id="thinkertoy" name="banner" value="thinkertoy">
                     <label for="thinkertoy"><pre style="cursor:pointer">{{ .Thinkertoy }}</pre>
                 </button>
+                  
+    <input type="hidden" id="output" name="output" value="{{.Output}}">
+    <button class="downl-btn" id="format" name="format" value="txt" formmethod="POST" formaction="/download" >Download TXT</button>
+    <button class="downl-btn" id="format" name="format" value="doc" formmethod="POST" formaction="/download" >Download DOC</button>
             </div>
         </div>
     </div>
