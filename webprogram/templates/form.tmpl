@@ -4,12 +4,12 @@
     <div class="inputs">
         <textarea name="input" id="input" placeholder="Enter text here (maximum 500 characters)" rows="5" cols="33" required="true" maxlength="500">{{ .Input }}</textarea>
         <div class="colorpicker">
-            <label>Pick   AsciiArt   Color</label>
+        <h4>
+            <label style="padding-left: 5px;padding-right: 5px;">Text</label>
             <input type="color"; name="color"; value= {{ .Color }}>
-        </div>
-        <div class="colorpicker">
-            <label>Pick   Background   Color</label>
-            <button class="downl-btn" disabled><input type="color"; name="backColor"; value= {{ .BackColor }}></button>
+            <label style="padding-left: 5px;padding-right: 5px;">Background</label>
+            <input type="color"; name="backColor"; value= {{ .BackColor }}>
+            </h4>
         </div>
         <div class="btns-row">
             <div>
@@ -22,10 +22,11 @@
                 <button id="thinkertoy" name="banner" value="thinkertoy">
                     <label for="thinkertoy"><pre style="cursor:pointer">{{ .Thinkertoy }}</pre>
                 </button>
-                  
+               {{ if .Output }}   
     <input type="hidden" id="output" name="output" value="{{.Output}}">
-    <button class="downl-btn" id="format" name="format" value="txt" formmethod="POST" formaction="/download" >Download TXT</button>
-    <button class="downl-btn" id="format" name="format" value="doc" formmethod="POST" formaction="/download" >Download DOC</button>
+    <button class="downl-btn" id="format" name="format" value="txt" formmethod="POST" formaction="/download" style="background: {{ .Color }};color: {{ .BackColor }};">Download TXT</button>
+    <button class="downl-btn" id="format" name="format" value="doc" formmethod="POST" formaction="/download" style="background: {{ .Color }};color: {{ .BackColor }};">Download DOC</button>
+           {{ end }}
             </div>
         </div>
     </div>
