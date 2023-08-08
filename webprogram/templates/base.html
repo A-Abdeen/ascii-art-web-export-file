@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ascii ART</title>
+        <link rel="icon" href="css/favicon.svg">
         <link rel="stylesheet" type="text/css" href="/css/base.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +15,7 @@
         <div class="wrapper">
             <div class="header">
                 <h3>
-                    <a href="/">You write <span class="green">text</span>, we draw <span class="purple">ART</span></a>
+                    <a href="/">You write <span class="red">text</span>, we draw <span class="redtwo">ART</span></a>
                 </h3>
             </div>
             {{ if not .Status }}
@@ -26,7 +27,8 @@
             {{ template "error" .}}
             {{ end }}
         </div>
-    </body>
+    </form>
+</body>
     <footer>
         <p> Copyright © {{ .Year }} Ahmed x Ahmed </p>
     </footer>
