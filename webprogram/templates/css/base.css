@@ -18,15 +18,15 @@ body {
 }
 .header a {
     text-decoration:none;
-    color:inherit;
+    color: #5E5C64;
 }
-.header .green {
+.header .red {
     font-family: 'Roboto Mono';
-    color:forestgreen;
+    color: #990011;
 }
-.header .purple {
+.header .redtwo {
     font-family: 'Lilita One';
-    color: purple;
+    color: #990011;
     font-size: 130%;
 }
 footer {

@@ -12,6 +12,7 @@ type Art struct {
 	Status     bool
 	ErrorMsg   string
 	ErrorCode  int
+	Download   bool 
 }
 
 type Err struct {

@@ -51,6 +51,7 @@ func ArtHandler(w http.ResponseWriter, r *http.Request) {
 				BackColor:  backColor,
 				Year:       2023,
 			}
+			// os.WriteFile("outputfile", []byte(finaloutput), 0644)	
 			if strings.HasPrefix(output.Output, "500: ") {
 				ErrorHandler(w, r, http.StatusInternalServerError)
 				return

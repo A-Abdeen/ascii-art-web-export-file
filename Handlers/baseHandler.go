@@ -30,7 +30,7 @@ func BaseHandler(w http.ResponseWriter, r *http.Request) {
 			Shadow:     string(shadowbanner),
 			Thinkertoy: string(thinkertoybanner),
 			Input:      "",
-			Color:      "#9141ac",
+			Color:      "#990011",
 			BackColor:  "#a7bfc2",
 			Year:       2023,
 		}
